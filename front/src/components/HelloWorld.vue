@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Test deploy change 1<h2>
+    <h2>Test trigger only front github action<h2>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
