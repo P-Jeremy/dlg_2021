@@ -1,0 +1,34 @@
+version: 2
+jobs:
+
+  api:
+    working_directory: ~/dlg_2021/api
+    docker:
+      - image: 'circleci/node:latest'
+      - image: 'circleci/mongo:3'
+        environment:
+          MONGO_INITDB_ROOT_USERNAME: root
+          MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    steps:
+      - checkout:
+          path: ~/dlg_2021
+      - setup_remote_docker
+      - run: npm install
+      - run: docker-compose up -d
+      - run: npm run test
+
+  front:
+    working_directory: ~/dlg_2021/front
+    docker:
+      - image: 'circleci/node:latest'
+    steps:
+      - checkout:
+          path: ~/dlg_2021
+      - run: npm install
+      - run: npm run test
+workflows:
+  version: 2
+  integration:
+    jobs:
+      - api
+      - front
