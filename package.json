@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install:all": "npm --prefix ./api install && npm --prefix ./front install "
+    "install:all": "npm --prefix ./api install && npm --prefix ./front install",
+    "test:all": "npm --prefix ./api run test && npm --prefix ./front run test"
   },
   "repository": {
     "type": "git",
