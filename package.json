@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "install:all": "npm --prefix ./api install && npm --prefix ./front install "
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/P-Jeremy/dlg_2021.git"
