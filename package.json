@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test:server": "npm --prefix ./api run test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/P-Jeremy/dlg_2021.git"
