@@ -1,5 +1,5 @@
-import { Song } from '../../../domain/models/Song';
-import { getAllSongs } from '../../../domain/usecase/get-all-songs';
+import { Song } from '../../../models/Song';
+import { getAllSongs } from '../../../usecase/get-all-songs';
 
 describe('UNIT | USECASE | get-songs', () => {
   describe('When there are songs in the db', () => {
