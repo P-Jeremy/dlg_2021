@@ -7,6 +7,7 @@ describe('UNIT | USECASE | get-songs', () => {
       // given
       const songs = [
         Song.from({
+          id: 1234,
           title: 'Tata yoyo',
           author: 'Pr Tournsol',
           lyrics: 'Taaaata yoyo',
@@ -14,6 +15,7 @@ describe('UNIT | USECASE | get-songs', () => {
           tags: [],
         }),
         Song.from({
+          id: 4567,
           title: 'Big bisou',
           author: 'Tintin',
           lyrics: 'Big bisooooou',
@@ -22,14 +24,14 @@ describe('UNIT | USECASE | get-songs', () => {
         }),
       ];
 
-      const songRepository = {
+      const songsRepository = {
         getAll: jest.fn(async () => songs),
       };
 
       // when
       const result = await getAllSongs({
         dependencies: {
-          songRepository,
+          songsRepository,
         },
       });
 
@@ -42,14 +44,14 @@ describe('UNIT | USECASE | get-songs', () => {
       // given
       const noSongFound = [];
 
-      const songRepository = {
+      const songsRepository = {
         getAll: jest.fn(async () => noSongFound),
       };
 
       // when
       const result = await getAllSongs({
         dependencies: {
-          songRepository,
+          songsRepository,
         },
       });
 

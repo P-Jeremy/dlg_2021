@@ -12,10 +12,17 @@ export class Song {
     this.lyrics = lyrics;
     this.tab = tab;
     this.tags = tags;
-    this.id = id;
+    this.id = id || null;
   }
 
-  static from({ title, author: author, lyrics, tab, tags }) {
-    return new Song({ id: null, title, author: author, lyrics, tab, tags });
+  static from({ id, title, author: author, lyrics, tab, tags }): Song {
+    return new Song({
+      id,
+      title,
+      author: author,
+      lyrics,
+      tab,
+      tags,
+    });
   }
 }

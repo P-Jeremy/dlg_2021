@@ -2,14 +2,14 @@ import { Song } from '../models/Song';
 
 interface GetAllSongsSignature {
   dependencies: {
-    songRepository: {
+    songsRepository: {
       getAll: () => Promise<Song[]>;
     };
   };
 }
 
 export function getAllSongs({
-  dependencies: { songRepository },
+  dependencies: { songsRepository },
 }: GetAllSongsSignature): Promise<Song[]> {
-  return songRepository.getAll();
+  return songsRepository.getAll();
 }
