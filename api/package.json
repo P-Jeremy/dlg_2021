@@ -15,7 +15,7 @@
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "env MONGO_CONFIG_URL='mongodb://root:rootpassword@localhost:27017' NODE_ENV=test jest",
-    "test:unit": "env MONGO_CONFIG_URL='mongodb://root:rootpassword@localhost:27017' NODE_ENV=test jest unit.spec.ts",
+    "test:unit": "NODE_ENV=test jest unit.spec.ts",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
